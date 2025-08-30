@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserReady QA - Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #2C3E50;
+            --blue: #3F51B5;
+            --coral: #FF6F61;
+            --beige: #FAF3E0;
+            --mint: #3EB489;
+        }
+
+        body {
+            font-family: 'Lato', system-ui, -apple-system, Lato;
+            line-height: 1.6;
+            color: var(--navy);
+            background: var(--beige);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(44, 62, 80, 0.1);
+            position: relative;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+            color: white;
+            padding: 60px 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 40%;
+            height: 200%;
+            background: var(--coral);
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .value-prop {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--coral);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .value-prop h2 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .value-prop p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 50px 50px 40px;
+            background: linear-gradient(to right, #f8f9fa, var(--beige));
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .problem-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 30px;
+        }
+
+        .problem-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--coral);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-2px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--coral);
+            display: block;
+        }
+
+        .stat-text {
+            font-size: 0.9rem;
+            color: var(--navy);
+            margin-top: 5px;
+        }
+
+        .gap-highlight {
+            background: var(--coral);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 50px 50px;
+            background: white;
+        }
+
+        .services-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid var(--beige);
+            border-radius: 15px;
+            padding: 35px;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue), var(--coral));
+        }
+
+        .service-card:hover {
+            border-color: var(--blue);
+            box-shadow: 0 8px 25px rgba(63, 81, 181, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .service-icon {
+            font-size: 1.8rem;
+            margin-right: 15px;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            flex: 1;
+        }
+
+        .service-subtitle {
+            font-size: 0.95rem;
+            color: var(--coral);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--blue);
+            white-space: nowrap;
+        }
+
+        .service-duration {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .service-description {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--coral);
+            font-weight: bold;
+        }
+
+        /* Footer Section */
+        .footer-section {
+            background: var(--navy);
+            color: white;
+            padding: 40px 50px;
+            text-align: center;
+        }
+
+        .footer-highlight {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--coral);
+        }
+
+        .footer-highlight h3 {
+            margin-bottom: 10px;
+            color: var(--coral);
+        }
+
+        .launch-special {
+            background: var(--coral);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--mint);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #359a7a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(62, 180, 137, 0.3);
+        }
+
+        a {
+            color: var(--coral);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header, .services-section, .problem-section, .footer-section {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            
+            .service-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .service-price {
+                margin-top: 10px;
+            }
+            
+            .problem-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">UserReady QA</div>
+            <div class="tagline">Catching what automation misses</div>
+            <div class="value-prop"> 
+                <h2>The Gap We Fill</h2>
+                <p>Startups need user-focused QA that is flexible and cost-effective. Traditional solutions are too expensive ($100K+ QA hires) and miss real-user experience issues.</p>
+            </div>
+        </header>
+
+        <!-- Problem Statement -->
+        <section class="problem-section">
+            <h2 class="problem-title">Why Startups Struggle with Delivering Quality</h2>
+            <div class="problem-stats">
+                <div class="stat-box">
+                    <span class="stat-number">$100K+</span>
+                    <div class="stat-text">Annual cost to hire QA engineer</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">55%</span>
+                    <div class="stat-text">Teams spend 20+ hours/week on test maintenance</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">🐛</span>
+                    <div class="stat-text">88% of users abandon an app due to bugs*</div>
+                </div>
+            </div>
+            <div class="gap-highlight">
+                We bridge the gap between technical QA and real User experience — finding friction before it becomes churn and a bad review.
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://calendly.com/nokoye-2fes/30min" class="button">Get Started</a> 
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services-section">
+            <h2 class="services-title">UserReady QA Services</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div>
+                            <div class="service-icon">🎯</div>
+                            <div class="service-title">UserReady Audit</div>
+                            <div class="service-subtitle">Your app's first impression check</div>
+                        </div>
+                        <div>
+                            <div class="service-price">$1,500–$2,500</div>
+                            <div class="service-duration">1 week delivery</div>
+                        </div>
+                    </div>
+                    <div class="service-description">
+                        Deep exploratory testing that reveals hidden friction in your core user flows.
+                    </div>
+                    <ul class="service-features">
+                        <li>Exploratory testing of 1-2 critical user journeys (e.g. onboarding, checkout)</li>
+                        <li>Prioritized findings report by user impact</li>
+                        <li>Loom walkthrough showing issues in action</li>
+                        <li>Quick wins list for immediate improvements</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div>
+                            <div class="service-icon">🚀</div>
+                            <div class="service-title">Launch Readiness Sprint</div>
+                            <div class="service-subtitle">Pre-launch risk assessment & optimization</div>
+                        </div>
+                        <div>
+                            <div class="service-price">$4,000–$6,000</div>
+                            <div class="service-duration">2 weeks delivery</div>
+                        </div>
+                    </div>
+                    <div class="service-description">
+                        Comprehensive testing across all workflows before you go live or raise funds.
+                    </div>
+                    <ul class="service-features">
+                        <li>Full MVP user journey mapping & testing</li>
+                        <li>Edge case discovery & usability analysis</li>
+                        <li>Go/no-go recommendation with fix timeline</li>
+                        <li>Real user UAT coordination (optional)</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div>
+                            <div class="service-icon">👥</div>
+                            <div class="service-title">Fractional QA Leadership</div>
+                            <div class="service-subtitle">Your interim quality champion</div>
+                        </div>
+                        <div>
+                            <div class="service-price">Price Upon Request</div>
+                            <div class="service-duration">Flexible engagement</div>
+                        </div>
+                    </div>
+                    <div class="service-description">
+                        Ongoing QA leadership and support without the full-time hire commitment.
+                    </div>
+                    <ul class="service-features">
+                        <li>Weekly strategy reviews + Slack support</li>
+                        <li>Release quality gates & triage protocols</li>
+                        <li>Process setup & team coaching</li>
+                        <li>Monthly quality metrics & improvements</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="footer-highlight">
+                <h3>🎁 All Services Include</h3>
+                <p>Clear prioritization by user impact • Actionable fix recommendations • Founder-friendly communication (no QA jargon)</p>
+            </div>
+            
+            <div class="launch-special">
+                🚀 Launch Special: 20% off your first engagement
+            </div>
+            
+            <p style="margin-top: 20px; opacity: 0.8;">
+                Exploratory Testing & Usability Audits for Confident Launches<br>
+                Ready to prevent churn before it happens?
+            </p>
+            
+            <div style="margin-top: 20px;">
+                <a href="https://calendly.com/nokoye-2fes/30min" class="button">Launch With Confidence</a>
+            </div>
+            
+            <p style="margin-top: 20px; opacity: 0.8; font-size: 0.9rem;">
+                <a href="https://www.shakebugs.com/blog/app-bugs-statistics/?utm_source=chatgpt.com">*Source: Shake</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
