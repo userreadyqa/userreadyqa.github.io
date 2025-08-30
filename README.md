@@ -20,6 +20,3 @@ Protect brand reputation
 Build trust with customers through seamless user experiences
 
 Get In Touch
-
-If you’re building a web or mobile app and want to ensure a smooth launch, reach out via LinkedIn: UserReady QA
- or contact us directly at https://calendly.com/nokoye-2fes/30min.
