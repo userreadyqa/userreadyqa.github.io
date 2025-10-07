@@ -1,22 +1,15 @@
 # userreadyqa
-UserReady QA
+Welcome to UserReady QA’s GitHub!
 
-UserReady QA is a quality assurance consultancy dedicated to helping founders, app builders, and product managers deliver products with confidence. While automation is essential, it doesn’t always capture what truly impacts end users — confusing workflows, UX gaps, or critical bugs that appear in real-world usage.
+We’re excited to share our flagship product - the Conversion Rescue Audit. We help growth-stage startups identify and fix the top 3 friction points that derail conversions in critical workflows like onboarding, checkout, and feature adoption.
 
-What We Do
+Our Mission:
+To bridge the gap between “your product works” and “your users succeed.” We focus not only on what’s broken technically, but on what’s costing you revenue — delivering actionable fixes that lift conversions and accelerate growth.
 
-🔍 Manual Exploratory Testing – Simulating real-user behaviour to uncover issues automation misses.
+Why It Matters:
+Analytics tell you where users drop off. We show you why.
+Reduce costly post-release fixes. Protect brand reputation.
+Build trust with customers through seamless user experiences.
 
-✅ User Acceptance Testing (UAT) – Ensuring your product meets customer expectations before launch.
-
-🧭 Usability Audits – Identifying friction points and optimising user experience.
-
-Why UserReady QA?
-
-Reduce costly post-release fixes
-
-Protect brand reputation
-
-Build trust with customers through seamless user experiences
-
+Conversion Rescue for Growth-Stage Startups
 Get In Touch
