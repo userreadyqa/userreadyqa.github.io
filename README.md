@@ -11,5 +11,5 @@ Analytics tell you where users drop off. We show you why.
 Reduce costly post-release fixes. Protect brand reputation.
 Build trust with customers through seamless user experiences.
 
-Conversion Rescue for Growth-Stage Startups
+Conversion Rescue for Growth-Stage Startups.
 Get In Touch
