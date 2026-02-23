@@ -144,8 +144,9 @@ TODO: Your solution goes below
 - **Actual Result:** 
 - **Priority:** High
 
-### Test Case 9 
-Verify invalid with character spaces "user name, pass 123"
+### Test Case 9 & 10 
+Verify invalid login attempts on username and password fields with character spaces "user name" / "username ", "pass 123" / "pass123 "
 
 -->
+
 
