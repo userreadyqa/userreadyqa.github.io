@@ -22,7 +22,16 @@ Please describe your solution and implement it in the code blocks provided below
 - The response body includes keys such as `userId`, `id`, `title`, and `body`
 
 **Solution:**
-<!-- <Write your solution description here> -->
+<!-- <Endpoint: https://jsonplaceholder.typicode.com
+Method: GET
+Request body {
+             "userid"="username".
+             "id" = "101",
+             "title = "mr",
+             "body" = "a valid user"
+}
+Expected code: 200
+Expected response: Status code 200 returned, correct content type and response under 2000ms> -->
 
 ```typescript
 // <Write your code here, feel free to change language if you prefer>
@@ -87,4 +96,5 @@ Please describe your solution and implement it in the code blocks provided below
 
 ```typescript
 // <Write your code here, feel free to change language if you prefer>
+
 ```
