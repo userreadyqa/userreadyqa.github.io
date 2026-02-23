@@ -130,4 +130,22 @@ TODO: Your solution goes below
 - **Actual Result:** 
 - **Priority:** High
 
+### Test Case 8 
+
+- **Test Case ID:** TC8 
+- **Title:** Verify invalid login attempt with an blank password
+- **Pre-conditions:** The user is on the login page
+- **Test Steps:** 
+  - 1. Open the login page
+  - 2. Enter a valid into the username field: "username"
+  - 3. Enter a invalid password into the password field: " "
+  - 4. Click on the login button
+- **Expected Result:** Verify an error message is displayed for an invalid login attempt
+- **Actual Result:** 
+- **Priority:** High
+
+### Test Case 9 
+Verify invalid with character spaces "user name, pass 123"
+
 -->
+
