@@ -1,15 +1,78 @@
-# userreadyqa
-Welcome to UserReady QA’s GitHub!
+# Speechify QA Technical Assessment
 
-We’re excited to share our flagship product - the Conversion Rescue Audit. We help growth-stage startups identify and fix the top 3 friction points that derail conversions in critical workflows like onboarding, checkout, and feature adoption.
+Welcome to Speechify's QA Engineer technical assessment! This assessment is designed to evaluate your knowledge and skills in software quality assurance, API testing, and test case development.
 
-Our Mission:
-To bridge the gap between “your product works” and “your users succeed.” We focus not only on what’s broken technically, but on what’s costing you revenue — delivering actionable fixes that lift conversions and accelerate growth.
+---
 
-Why It Matters:
-Analytics tell you where users drop off. We show you why.
-Reduce costly post-release fixes. Protect brand reputation.
-Build trust with customers through seamless user experiences.
+## Assessment Overview
 
-Conversion Rescue for Growth-Stage Startups.
-Get In Touch
+This assessment consists of three main tasks:
+
+### Task 1: General QA Knowledge & API Testing Questions
+- Comprehensive questions about QA fundamentals and API testing
+- Focus on real-world scenarios and best practices
+- Includes questions about test management, bug handling, and API concepts
+- Located in: `src/task1.md`
+
+### Task 2: Test Case Development
+- Design test cases for a web application login functionality
+- Create structured test cases using the provided template
+- Cover both positive and negative scenarios
+- Located in: `src/task2.md`
+
+### Task 3: API Testing Implementation
+- Implement test cases for JSONPlaceholder API
+- Test various HTTP methods (GET, POST)
+- Handle both successful and error scenarios
+- Located in: `src/task3.md`
+
+## Time Limits
+
+*Total Time Limit:* 80 minutes
+
+*Recommended Distribution:* 
+- Task 1 (23 Questions): 20 minutes
+- Task 2 (Test Cases): 25 minutes
+- Task 3 (API Testing): 35 minutes
+
+
+## Guidelines (Important)
+
+1. Complete all three tasks in their respective markdown files
+
+2. Write your answers by replacing the `<!-- <Write your answer here> -->` blocks.
+   - **Do not write your answers as comments since they will not be sent to the engineers by the system and will not be evaluated**
+
+3. Task-specific instructions:
+   - Task 1: Provide clear, concise answers to each question
+   - Task 2: Follow the provided test case template exactly  
+   - Task 3: Write code solutions in the designated code blocks
+
+4. General guidelines:
+   - Write clear, professional answers
+   - Follow provided templates and formats
+   - Use proper testing terminology
+   - Reference specific examples when relevant
+   - Demonstrate practical knowledge
+
+5. DO NOTs
+   - Do not write your answers as comments, as they will not be evaluated
+   - Do not modify or add any files other than the designated task files
+   - Do not alter any text outside of the answer blocks
+   - Do not create additional files or sections
+   - Do not use external libraries or tools
+   - Do not use AI assistants or code generation tools
+   - Do not copy answers from other sources or commit plagiarism
+   - Do not write answers in external files or make modifications outside the designated answer blocks - the system will ignore these and they will not be sent to the engineers for evaluation.
+
+
+## Evaluation Criteria
+
+Your submission will be evaluated based on:
+
+- Completeness and accuracy of answers
+- Quality and structure of test cases
+- Code quality and testing approach
+- Understanding of QA principles
+- Attention to detail
+- Problem-solving skills
